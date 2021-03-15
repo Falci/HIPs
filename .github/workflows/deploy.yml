@@ -1,7 +1,7 @@
 name: Website
 on:
   push:
-    branches: [master]
+    # branches: [master]
 jobs:
   job1:
     name: Build Website
