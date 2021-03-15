@@ -31,7 +31,6 @@ fs.readdirSync(ORIGIN).forEach(file => {
         const newMeta = [
             `title: ${props.Title}`,
             `date: ${props.Created}`,
-            `draft: ${props.Status.toLowerCase() === 'draft'}`,
             `status: "${props.Status}"`,
             `category: "${props.Type}"`,
             `authors: ["${authors || props.Author}"]`,

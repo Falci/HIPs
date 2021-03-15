@@ -29,7 +29,7 @@ jobs:
         cd docs
         npm i fs-extra properties
         node parse.js
-        hugo --minify --buildDrafts
+        hugo --minify
 
     - name: Publish
       uses: peaceiris/actions-gh-pages@v3
