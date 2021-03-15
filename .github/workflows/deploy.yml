@@ -20,18 +20,19 @@ jobs:
           node-version: 12.x
 
 
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: 'latest'
-        extended: true
-
-    - run: |
+    - name: Prepare
+      run: |
         cd docs
         npm i fs-extra properties
         node parse.js
         ls -lha content/proposals
-        hugo --minify
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        pwd: docs
+        hugo-version: 'latest'
+        extended: true
 
     - name: Publish
       uses: peaceiris/actions-gh-pages@v3
