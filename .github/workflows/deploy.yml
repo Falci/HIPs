@@ -24,11 +24,13 @@ jobs:
       uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: 'latest'
+        extended: true
 
     - run: |
         cd docs
         npm i fs-extra properties
         node parse.js
+        ls -lha content/proposals
         hugo --minify
 
     - name: Publish
