@@ -1,15 +1,112 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Draft on Handshake Improvement Proposals</title><link>https://hsd-dev.org/HIPs/status/draft/</link><description>Recent content in Draft on Handshake Improvement Proposals</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hsd-dev.org/HIPs/status/draft/index.xml" rel="self" type="application/rss+xml"/><item><title>Extend reserve name claim period with hard fork</title><link>https://hsd-dev.org/HIPs/proposals/0014/</link><pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0014/</guid><description>Tweet-sized abstract Important reserved names (about 1,000) stay reserved for 4 additional years, a total of 8. The rest of the reserved names (about 89,000) become available for auctions after 4 years (no change) See the section &amp;ldquo;Example opinions&amp;rdquo; for better understanding.
-Abstract Handshake was launched with a set of reserved names that can be claimed by their current legacy DNS owners using DNSSEC proofs. The claimPeriod was originally set to exactly four years (4 * 365 * 144 = 210,240 blocks) after which any of the reserved names could be OPEN for an auction and acquired by the usual bidding process.</description></item><item><title>The Meta Account Key</title><link>https://hsd-dev.org/HIPs/proposals/0011/</link><pubDate>Fri, 25 Mar 2022 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0011/</guid><description>Abstract There are some wallet operations that do not require addresses for receiving HNS on chain. However, BIP32 recoverability is still desired for metadata that may be involved in these operations. For these operations, we define a constant account index of 0xffffffff as &amp;ldquo;The Meta Account&amp;rdquo;. Derivation paths from this account key should be specified in this document to track future standard uses for The Meta Account Key.
-Motivation Hardware Wallets Hardware wallets like Ledger Nano S and Nano X support multiple coin types.</description></item><item><title>Standard Recoverable Script Addresses</title><link>https://hsd-dev.org/HIPs/proposals/0009/</link><pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0009/</guid><description>Abstract We propose a method for generating application-specific scripts and scripthash addresses by deriving key pairs from specific BIP44 branches.
-Motivation Secondary market protocols, like Shakedex (see HIP-1), currently generate a new private key for each script address, which makes recovery possible only as long as the user has backed up each individual key they generate. By deterministically deriving script addresses using a standard BIP44 wallet seed, we can recover the user&amp;rsquo;s auction listing and pending fills by importing the seed, re-generating the script addresses and re-scanning the blockchain.</description></item><item><title>Recoverable Bid Values</title><link>https://hsd-dev.org/HIPs/proposals/0008/</link><pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0008/</guid><description>Abstract We propose a method for embedding encrypted bid values on the blockchain using nulldata outputs. Values are encrypted using a combination of a user&amp;rsquo;s private key and other data recoverable from the blockchain.
-Motivation The Handshake reference implementation (hsd) includes a wallet (hsw) that mostly conforms to BIP44. The goal of BIP44 is to allow a recovery process whereby a user could restore the complete state of their wallet using only their wallet&amp;rsquo;s master private key (usually encoded by a BIP39 seed phrase) and all the public data available on the blockchain.</description></item><item><title>DANE for Decentralized Naming Systems (dDANE)</title><link>https://hsd-dev.org/HIPs/proposals/0007/</link><pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0007/</guid><description>Abstract ICANN-rooted DNS is not the only internet naming system available to users, but it is the only naming system in which certificate authorities issue SSL certificates. Since SSL certificates are the mechanism behind HTTPS, browsing securely to websites outside the ICANN-rooted DNS is difficult and out of scope for the majority of users.
-DANE is a protocol that uses DNSSEC to authenticate SSL certificates as presented by a web server and could be used to bypass certificate authorities, assuming the naming system is trusted or cryptographically secure.</description></item><item><title>Interactive Atomic Name Swaps</title><link>https://hsd-dev.org/HIPs/proposals/0004/</link><pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0004/</guid><description>Abstract We define a protocol by which two Handshake users can agree on a price for a HNS domain name, and swap the name itself for payment in HNS using a single transaction. The buyer and seller must be able to interact before and during the protocol, and the final transaction is signed by both parties.
-Motivation HNS users need a decentralized, platform-less way to sell the domain names they&amp;rsquo;ve acquired form on-chain auctions.</description></item><item><title>Name data standard for alternative namespace resolution</title><link>https://hsd-dev.org/HIPs/proposals/0005/</link><pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0005/</guid><description>Abstract This HIP describes how to set the data for a Handshake name so that it can resolved via an external namespace or alternative consensus system. Resolution must be performed by an extension to a Handshake resolver which may not be included by default in full or light clients.
-Motivation There may be various reasons to resolve a name on an alternative namespace other than a domain name or an name server hosted on an IP address.</description></item><item><title>Well Known directory for wallets address</title><link>https://hsd-dev.org/HIPs/proposals/0002/</link><pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0002/</guid><description>Abstract This HIP describes how to publish a wallet address in a domain.
-Motivation Wallet address are not human friendly. Sending an address normally involves &amp;ldquo;copy &amp;amp; paste&amp;rdquo; and is nearly impossible to do via voice channels.
-Since Handshake is all about owning domains, we could use them as aliases to our wallet addresses.
-Protocol The basics of this protocol consists of serving the address in an HTTPS request to the .</description></item><item><title>HIP Template</title><link>https://hsd-dev.org/HIPs/proposals/0000/</link><pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0000/</guid><description>Abstract This is a section for an abstract.
-Motivation This is a section for a motivation.
-Body This is a section for a body. The title of the section should be changed and the section can be split into multiple sections and subsections.
-References This is a section for references such as links to other documents (BIP or HIP) or to reference implementations.</description></item><item><title>Non-Interactive Name Atomic Swaps</title><link>https://hsd-dev.org/HIPs/proposals/0001/</link><pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0001/</guid><description>Abstract This document proposes a standard way for Handshake names to be traded on a secondary market without the need of a trusted third party to act as an escrow.
-Motivation A healthy secondary market for Handshake names will bring more activity to the Handshake economy. Without a solution for a decentralized secondary market, it is likely that most names will end up being managed on a custodial platform where there is liquidity for names.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Draft on Handshake Improvement Proposals</title><link>https://hsd-dev.org/HIPs/status/draft/</link><description>Recent content in Draft on Handshake Improvement Proposals</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 10 Feb 2025 09:46:11 +0000</lastBuildDate><atom:link href="https://hsd-dev.org/HIPs/status/draft/index.xml" rel="self" type="application/rss+xml"/><item><title>Stateless DANE clients</title><link>https://hsd-dev.org/HIPs/proposals/0017/</link><pubDate>Sun, 11 Sep 2022 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0017/</guid><description>&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>This document proposes a standard for a new form of light clients that use extremely minimal resources suitable for embedding in web browser applications, especially on mobile devices. Clients only store tiny 32-byte Merkle tree roots and can use them to verify TLS trustlessly for any Handshake site completely off-chain, without doing any extra network lookups compared to traditional sites and without maintaining a stateful connection to a p2p network. The client only needs a simple forwarding DNS resolver to do untrusted A/AAAA lookups. Urkel proofs, TLSA records, and DNSSEC authentication chain are sent by the server itself embedded in an x509 server certificate. Verifying certificates is an entirely offline process that requires zero network lookups. The proposed client can encrypt all DNS queries and does not leak any requests to full nodes.&lt;/p></description></item><item><title>Escher Update Chains for decentralized subdomains</title><link>https://hsd-dev.org/HIPs/proposals/0016/</link><pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0016/</guid><description>&lt;p>&lt;img src="hip-0016/DrawingHands.jpg" alt="Drawing Hands">&lt;/p>
+&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>This document specifies a new protocol that enables a Handshake TLD to sell
+subdomains in an unrevocable manner, eliminating the &amp;ldquo;parent domain risk&amp;rdquo;
+inherent in domains below the blockchain-secured HNS root zone. The protocol
+does not require any significant changes to the HNS blockchain consensus system.
+However, a modest soft-fork will significantly improve the performance, security,
+and accessibility of the system by light clients.&lt;/p>
+&lt;p>Escher deploys a new Urkel Tree for each TLD that opts-in to the protocol. In
+this document we will refer to these as &amp;ldquo;Escher Trees&amp;rdquo; but they are just Urkel
+trees with specific parameters. The roots of these Escher Trees are committed
+to the HNS root zone Urkel Tree and are therefore verifiable by light clients.&lt;/p></description></item><item><title>Update Chains</title><link>https://hsd-dev.org/HIPs/proposals/0015/</link><pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0015/</guid><description>&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>This document introduces an abstract mechanism that can be used as an element
+of Layer 2 protocols, applications, and soft forks on the Handshake blockchain.
+We take advantage of the covenant system and in particular the &lt;code>UPDATE&lt;/code> covenant,
+which enables a HNS name owner to commit up to 512 bytes of entirely arbitrary
+data at the maximum rate of once per block. Since names are always owned by a
+single transaction output, a series of &lt;code>UPDATE&lt;/code> covenants for a name can used
+like a linear message channel or, in a sense, a miniature independent blockchain
+controlled by one Handshake name.&lt;/p></description></item><item><title>Extend reserve name claim period with hard fork</title><link>https://hsd-dev.org/HIPs/proposals/0014/</link><pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0014/</guid><description>&lt;h2 id="tweet-sized-abstract">Tweet-sized abstract&lt;/h2>
+&lt;ul>
+&lt;li>Important reserved names (about 1,000) stay reserved for 4 additional years, a total of 8.&lt;/li>
+&lt;li>The rest of the reserved names (about 89,000) become available for auctions after
+4 years (no change)&lt;/li>
+&lt;/ul>
+&lt;p>See the section &amp;ldquo;Example opinions&amp;rdquo; for better understanding.&lt;/p>
+&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>Handshake was launched with a set of reserved names that can be claimed by their
+current legacy DNS owners using DNSSEC proofs. The &lt;code>claimPeriod&lt;/code> was originally
+set to exactly four years (&lt;code>4 * 365 * 144 = 210,240&lt;/code> blocks) after which any of
+the reserved names could be OPEN for an auction and acquired by the usual
+bidding process. After a year and a half of HNS mainnet, the community has
+decided that this timespan is not sufficient to onboard many of the legacy name
+holders. In addition, allowing some names (like &lt;code>.com&lt;/code>) to go up for auction
+after only four years of mainnet may lead to reckless name collisions that will
+not help the project move forward.&lt;/p></description></item><item><title>The Meta Account Key</title><link>https://hsd-dev.org/HIPs/proposals/0011/</link><pubDate>Fri, 25 Mar 2022 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0011/</guid><description>&lt;h1 id="abstract">Abstract&lt;/h1>
+&lt;p>There are some wallet operations that do not require addresses for receiving HNS
+on chain. However, BIP32 recoverability is still desired for metadata that may
+be involved in these operations. For these operations, we define a constant
+account index of &lt;code>0xffffffff&lt;/code> as &amp;ldquo;The Meta Account&amp;rdquo;. Derivation paths from this
+account key should be specified in this document to track future standard uses
+for The Meta Account Key.&lt;/p>
+&lt;h1 id="motivation">Motivation&lt;/h1>
+&lt;h2 id="hardware-wallets">Hardware Wallets&lt;/h2>
+&lt;p>Hardware wallets like Ledger Nano S and Nano X support multiple coin types.
+The Ledger wallet in particular has &amp;ldquo;apps&amp;rdquo; for each coin and the BIP32 paths
+are partially &lt;a href="https://github.com/LedgerHQ/app-handshake/commit/19d63b7ddc530ab96010afa5280f621b2e16e045">locked&lt;/a>. This means that wallet software
+can only request data from the hardware in the &lt;code>account&lt;/code>, &lt;code>branch&lt;/code>, and &lt;code>index&lt;/code>
+ranges.&lt;/p></description></item><item><title>Standard Recoverable Script Addresses</title><link>https://hsd-dev.org/HIPs/proposals/0009/</link><pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0009/</guid><description>&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>We propose a method for generating application-specific scripts and scripthash
+addresses by deriving key pairs from specific BIP44 branches.&lt;/p>
+&lt;h2 id="motivation">Motivation&lt;/h2>
+&lt;p>Secondary market protocols, like Shakedex (see &lt;a href="https://hsd-dev.org/HIPs/proposals/0001/">HIP-1&lt;/a>),
+currently generate a new private key for each script address, which makes recovery
+possible only as long as the user has backed up each individual key they generate.
+By deterministically deriving script addresses using a standard BIP44 wallet seed,
+we can recover the user&amp;rsquo;s auction listing and pending fills by importing the seed,
+re-generating the script addresses and re-scanning the blockchain.&lt;/p></description></item><item><title>Recoverable Bid Values</title><link>https://hsd-dev.org/HIPs/proposals/0008/</link><pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0008/</guid><description>&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>We propose a method for embedding encrypted bid values on the blockchain using
+&lt;code>nulldata&lt;/code> outputs. Values are encrypted using a combination of a user&amp;rsquo;s private key
+and other data recoverable from the blockchain.&lt;/p>
+&lt;h2 id="motivation">Motivation&lt;/h2>
+&lt;p>The Handshake reference implementation (hsd) includes a wallet (hsw) that mostly conforms to
+&lt;a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki">BIP44&lt;/a>. The goal of
+BIP44 is to allow a recovery process whereby a user could restore the complete state
+of their wallet using only their wallet&amp;rsquo;s master private key (usually encoded
+by a &lt;a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP39 seed phrase&lt;/a>)
+and all the public data available on the blockchain.&lt;/p></description></item><item><title>DANE for Decentralized Naming Systems (dDANE)</title><link>https://hsd-dev.org/HIPs/proposals/0007/</link><pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0007/</guid><description>&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>ICANN-rooted DNS is not the only internet naming system available to users, but it
+is the only naming system in which certificate authorities issue SSL certificates.
+Since SSL certificates are the mechanism behind HTTPS, browsing securely to websites
+outside the ICANN-rooted DNS is difficult and out of scope for the majority of users.&lt;/p>
+&lt;p>DANE is a protocol that uses DNSSEC to authenticate SSL certificates as presented by
+a web server and could be used to bypass certificate authorities, assuming the naming
+system is trusted or cryptographically secure.&lt;/p></description></item><item><title>Interactive Atomic Name Swaps</title><link>https://hsd-dev.org/HIPs/proposals/0004/</link><pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0004/</guid><description>&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>We define a protocol by which two Handshake users can agree on a price for a HNS
+domain name, and swap the name itself for payment in HNS using a single transaction.
+The buyer and seller must be able to interact before and during the protocol, and
+the final transaction is signed by both parties.&lt;/p>
+&lt;h2 id="motivation">Motivation&lt;/h2>
+&lt;p>HNS users need a decentralized, platform-less way to sell the domain names they&amp;rsquo;ve
+acquired form on-chain auctions. They need to be able to engage in trustless commerce
+without third-party custodians to ensure censorship resistance and protect against
+weak points of centralization.&lt;/p></description></item><item><title>Name data standard for alternative namespace resolution</title><link>https://hsd-dev.org/HIPs/proposals/0005/</link><pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0005/</guid><description>&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>This HIP describes how to set the data for a Handshake name so that it can resolved via an external namespace or alternative consensus system.
+Resolution must be performed by an extension to a Handshake resolver which may not be included by default in full or light clients.&lt;/p>
+&lt;h2 id="motivation">Motivation&lt;/h2>
+&lt;p>There may be various reasons to resolve a name on an alternative namespace other than a domain name or an name server hosted on an IP address.
+One example is decentralized subdomains: software could recognize the special records for an HNS name and resolve the user query on an external system,
+where protocol rules allow for censorship-resistant subdomain registration, relieving those domain owners of parent-zone risk.&lt;/p></description></item><item><title>Well Known directory for wallets address</title><link>https://hsd-dev.org/HIPs/proposals/0002/</link><pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0002/</guid><description>&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>This HIP describes how to publish a wallet address in a domain.&lt;/p>
+&lt;h2 id="motivation">Motivation&lt;/h2>
+&lt;p>Wallet address are not human friendly. Sending an address normally involves &amp;ldquo;copy &amp;amp; paste&amp;rdquo; and is nearly impossible to do via voice channels.&lt;/p>
+&lt;p>Since Handshake is all about owning domains, we could use them as aliases to our wallet addresses.&lt;/p>
+&lt;h3 id="protocol">Protocol&lt;/h3>
+&lt;p>The basics of this protocol consists of serving the address in an HTTPS request to the &lt;a href="https://tools.ietf.org/html/rfc8615">.well-known directory&lt;/a>. For security reasons, should be done over HTTPS.&lt;/p></description></item><item><title>HIP Template</title><link>https://hsd-dev.org/HIPs/proposals/0000/</link><pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0000/</guid><description>&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>This is a section for an abstract.&lt;/p>
+&lt;h2 id="motivation">Motivation&lt;/h2>
+&lt;p>This is a section for a motivation.&lt;/p>
+&lt;h2 id="body">Body&lt;/h2>
+&lt;p>This is a section for a body. The title of the section should be changed
+and the section can be split into multiple sections and subsections.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;p>This is a section for references such as links to other documents (BIP or HIP)
+or to reference implementations.&lt;/p></description></item><item><title>Non-Interactive Name Atomic Swaps</title><link>https://hsd-dev.org/HIPs/proposals/0001/</link><pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate><guid>https://hsd-dev.org/HIPs/proposals/0001/</guid><description>&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>This document proposes a standard way for Handshake names to be traded on a secondary market
+without the need of a trusted third party to act as an escrow.&lt;/p>
+&lt;h2 id="motivation">Motivation&lt;/h2>
+&lt;p>A healthy secondary market for Handshake names will bring more activity to the Handshake economy.
+Without a solution for a decentralized secondary market, it is likely that most names will
+end up being managed on a custodial platform where there is liquidity for names.&lt;/p></description></item></channel></rss>
